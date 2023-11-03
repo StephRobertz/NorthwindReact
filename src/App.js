@@ -5,7 +5,7 @@ import Posts from './Posts'
 import CustomerList from './customers/CustomerList'
 import UserList from './users/UserList'
 import Message from './Message'
-
+import ProductList from './products/ProductList'
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -36,15 +36,15 @@ useEffect(() => {
    return (
   
 <Router>
-  <div>
-  {loggedInUser != "" &&
+  
+  {loggedInUser !== "" &&
     
      
      <Navbar bg="dark" variant="dark">
             <Nav className="mr-auto">
                 <Nav.Link href='/home' className='nav-link'>Home</Nav.Link>
                 <Nav.Link href='/customers' className='nav-link'>Customers</Nav.Link>
-                <Nav.Link href='/Products' className='nav-link'>Products</Nav.Link>
+                <Nav.Link href='/products' className='nav-link'>Products</Nav.Link>
                 <Nav.Link href='/users' className='nav-link'>Users</Nav.Link>
                 <Nav.Link href='/Posts' className='nav-link'>Posts</Nav.Link>
                 <Nav.Link href='/Laskuri' className='nav-link'>Laskuri</Nav.Link>
@@ -64,7 +64,7 @@ useEffect(() => {
      {showCustomerList && <button onClick={() => setShowCustomerList(false)}>Piilota asiakkat</button>}
      {showCustomerList && <CustomerList setMessage={setMessage} setIsPositive={setIsPositive} setShowMessage={setShowMessage}/>} */}
 
-    {loggedInUser == "" && <LoginForm  setIsPositive={setIsPositive} setMessage={setMessage}
+    {loggedInUser === "" && <LoginForm  setIsPositive={setIsPositive} setMessage={setMessage}
      setShowMessage={setShowMessage} setLoggedInUser={setLoggedInUser}/>}
      <Routes>
      <Route path='/home'
@@ -77,6 +77,12 @@ useEffect(() => {
       element={<CustomerList setMessage={setMessage} 
       setIsPositive={setIsPositive} setShowMessage={setShowMessage}/>}>
      </Route>
+
+     <Route path='/products'
+
+      element={<ProductList setMessage={setMessage} 
+      setIsPositive={setIsPositive} setShowMessage={setShowMessage}/>}>
+      </Route>
 
      <Route path='/users'
       element={<UserList setMessage={setMessage} 
@@ -93,7 +99,7 @@ useEffect(() => {
       </Routes>
       
      
-    </div>
+    
     </Router>
     
   );
