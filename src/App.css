@@ -1,38 +1,107 @@
 .App {
   text-align: center;
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+input[type=submit],
+button{
+  border-radius: 4px;
+  padding: 10px;
+  margin-left: 5px;
+  width: 20%;
+  height: 5%;
+  color: rgb(239, 245, 249);
+  background-color: #2C2C2D;
+  cursor: pointer;
+  margin: 10px;
+  border: none;
+  box-shadow: 0px 0px 0px 3px #2c2c2d0f;
+  transition-duration: 0.35s;
+}
+.btnX{
+  top: 0;
+  right: 0;
+  position: absolute;
+  height: 30px;
+  max-width: 30px;
+  
+  
+  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button:hover{
+  background-color: rgb(192, 197, 196);
+  border: none;
+}
+input[type=submit]:hover{
+  background-color: rgb(192, 197, 196);
+  border: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+.post, .customerDetails{
+  min-width: 50%;
+  max-width: 50%;
+  background-color: #ccd3c293;
+  border-radius: 7px;
+  margin: auto;
+  place-items: center;
+  padding: 5%;
+  position: relative;
+  
+}
+.posts h4{
+font-size: 20px;
+
+}
+table{
+  margin: auto;
+  place-items: center;
+
+}
+.add-container{
+  min-width: 50%;
+  max-width: 40%;
+  background-color: rgba(137, 167, 145, 0.361);
+  margin: auto;
+  place-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
 }
 
-.App-link {
-  color: #61dafb;
+input[type=text]{
+  margin: 4px;
+  padding: 10px;
+  
+}
+.neg {
+  color: red;
+  background: lightgrey;
+  font-size: 36px;
+  font-weight: bold;
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  margin-top: 10%;
+  width: 70%;
+  margin-left: 15%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.pos {
+  color: green;
+  background: lightgrey;
+  font-size: 36px;
+  font-weight: bold;
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  margin-top: 10%;
+  width: 70%;
+  margin-left: 15%;
 }
+
